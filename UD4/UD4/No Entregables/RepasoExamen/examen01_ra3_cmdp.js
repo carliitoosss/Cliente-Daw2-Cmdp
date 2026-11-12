@@ -13,7 +13,7 @@ let frases=[
     "El sol brilla",
     "Que aburrido es estudiar"
 ];
-let prohibidas=["Odio", "aburrido"]
+let prohibidas=["Odio", "aburrido"];
 
 function contienePalabrasProhibidas(frases, prohibidas){
     return frases.filter((frase)=>{
