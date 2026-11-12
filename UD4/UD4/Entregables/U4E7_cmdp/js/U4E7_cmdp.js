@@ -75,30 +75,30 @@ class Flota{
     constructor(){
         this.#autobuses=[];
     }
-    agregarBus(bus){
+    agregarBus(bus){ // Misma comprobación que en el metodo asignarConductor, pero en vez de darle un valor, lo metemos dentro de un array.
         if (bus instanceof Bus){
             this.#autobuses.push(bus);
         }else{
             throw new Error("Error al insertar el autobus, comprueba que sea de la instancia de la clase de Bus");
         }
     }
-    obtenerDisponibes(){
+    obtenerDisponibes(){ // Obtenemos todos los autobuses que tienen plazasDisponibles.
         let busesDisponibles=this.#autobuses.filter(bus=>bus.pasajeros<bus.capacidad);
         return busesDisponibles;
     }
-    hayCompletos(){
-        let hayCompletos=this.#autobuses.some(plazasDisponibles=>plazasDisponibles===0);
+    hayCompletos(){ // Obtenemos si algun autobus va completo o no, mediante true or false.
+        let hayCompletos=this.#autobuses.some(bus=>bus.pasajeros>=bus.capacidad);
         return hayCompletos;
     }
-    todosConPasajeros(){
+    todosConPasajeros(){ // Obtenemos si todos los autobuses tienen al menos un pasajero, mediante true or false.
         let todosConPasajeros=this.#autobuses.every(bus=>bus.pasajeros>0);
         return todosConPasajeros;
     }
-    buscarVacio(){
+    buscarVacio(){ // Obtenemos el primer autobus que vea vacío.
         let vacio=this.#autobuses.find(bus=>bus.pasajeros===0);
         return vacio;
     }
-    totalPasajero(){
+    totalPasajero(){ // Obtenemos el total de los pasajeros que van en todos los autobuses.
         let pasajeros=this.#autobuses.reduce((suma, bus)=>{
             return suma+bus.pasajeros;
         },0);
@@ -106,17 +106,17 @@ class Flota{
     }
 }
 
-// let conductor1=new Conductor("Jose", 1234);
-// let bus101=new Bus(40);
-// bus101.asignarConductor(conductor1);
-// bus101.subir(25);
-// bus101.subir(10);
-// bus101.subir(10);
-// bus101.bajar(15);
-// bus101.bajar(30);
-
-
+let conductor1=new Conductor("Jose", 1234);
 const bus101=new Bus(40);
+bus101.asignarConductor(conductor1);
+bus101.subir(25);
+bus101.subir(10);
+bus101.subir(10);
+bus101.bajar(15);
+bus101.bajar(30);
+
+
+
 const bus102 = new Bus(30);
 const bus103 = new Bus(50);
 const bus104 = new Bus(20);
@@ -135,7 +135,16 @@ flota.agregarBus(bus102);
 flota.agregarBus(bus103);
 flota.agregarBus(bus104);
 flota.agregarBus(bus105);
-
+console.log(" ");
+console.log(flota.obtenerDisponibes());
+console.log(flota.hayCompletos());
+console.log(flota.todosConPasajeros());
+console.log(flota.buscarVacio());
+console.log(flota.totalPasajero());
+console.log(" "); // Compraciones extras para saber si devuelve bus vacio o no.
+bus105.subir(35);
+bus101.bajar(25);
+console.log(" ");
 console.log(flota.obtenerDisponibes());
 console.log(flota.hayCompletos());
 console.log(flota.todosConPasajeros());
