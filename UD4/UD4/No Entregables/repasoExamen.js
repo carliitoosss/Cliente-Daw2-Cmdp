@@ -21,3 +21,4 @@ let resultado4=frases.every(frase=>array2.some(palabra=>frase.includes(palabra))
 
 // Algunas de mis frases contienen todas las palabras
 let resultado5=frases.some(frase=>array2.every(palabra=>frase.includes(palabra)));
+console.log(resultado5);
