@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor-botones {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 60px;
+}
+
+button {
+    width: 153px;
+    height: 57px;
+    border: none;
+    border-radius: 11px;
+    font-size: 12px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+}
+
+#boton1 {
+    background-color: red;
+}
+
+#boton2 {
+    background-color: yellow;
+}
+
+#boton3 {
+    background-color: green;
+}
+
+h1 {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 60px;
+}
