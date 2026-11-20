@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad DOM - Gestión de una lista</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/app.js" defer></script>
+</head>
+<body>
+    <main class="contenedor">
+        <h1>Gestión dinámica de una lista</h1>
+        <p class="introduccion">Añade elementos a la lista y elimina el primero o el último utilizando JavaScript.</p>
+
+        <section class="panel" aria-labelledby="titulo-lista">
+            <h2 id="titulo-lista">Mi lista</h2>
+            <ul id="lista">
+                <li>Elemento de muestra</li>
+            </ul>
+        </section>
+
+        <section class="panel" aria-labelledby="titulo-nuevos">
+            <h2 id="titulo-nuevos">Añadir elementos</h2>
+            <div class="fila-formulario">
+                <label for="cantidad">Número de elementos:</label>
+                <input type="number" id="cantidad" min="1" max="20" step="1" placeholder="Ej. 3">
+                <button type="button" id="btn-generar">Generar campos</button>
+            </div>
+
+            <div id="campos-generados" class="campos-generados"></div>
+
+            <button type="button" id="btn-anadir" class="boton-principal">Añadir a la lista</button>
+        </section>
+
+        <section class="panel" aria-labelledby="titulo-eliminar">
+            <h2 id="titulo-eliminar">Eliminar elementos</h2>
+            <div class="botones-eliminar">
+                <button type="button" id="btn-borrar-primero" class="boton-peligro">Borrar primer li</button>
+                <button type="button" id="btn-borrar-ultimo" class="boton-peligro">Borrar último li</button>
+            </div>
+        </section>
+
+        <p id="mensaje" class="mensaje" role="status" aria-live="polite"></p>
+    </main>
+</body>
+</html>

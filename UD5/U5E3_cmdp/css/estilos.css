@@ -1,0 +1,74 @@
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #233044;
+    background-color: #f3f6fa;
+}
+
+* { box-sizing: border-box; }
+
+body { margin: 0; padding: 32px 16px; }
+
+.contenedor { max-width: 800px; margin: 0 auto; }
+
+h1 { margin-top: 0; color: #17365d; }
+h2 { margin-top: 0; font-size: 1.2rem; }
+.introduccion { line-height: 1.5; color: #536174; }
+
+.panel {
+    background: white;
+    border: 1px solid #dae2ec;
+    border-radius: 10px;
+    padding: 22px;
+    margin: 18px 0;
+    box-shadow: 0 2px 8px rgb(30 48 76 / 5%);
+}
+
+#lista { padding-left: 26px; margin-bottom: 0; }
+#lista li { padding: 6px 2px; }
+
+.fila-formulario, .botones-eliminar {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+label { font-weight: bold; }
+
+input {
+    padding: 10px 12px;
+    border: 1px solid #a9b8cb;
+    border-radius: 6px;
+    font: inherit;
+}
+
+#cantidad { width: 110px; }
+
+button {
+    border: 0;
+    border-radius: 6px;
+    background-color: #356eaf;
+    color: white;
+    padding: 11px 16px;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover { filter: brightness(0.91); }
+button:focus-visible, input:focus-visible { outline: 3px solid #e2aa39; outline-offset: 2px; }
+.boton-principal { background-color: #27764f; margin-top: 16px; }
+.boton-peligro { background-color: #a93636; }
+
+.campos-generados { display: grid; gap: 12px; margin-top: 18px; }
+.campo-generado { display: flex; flex-direction: column; gap: 6px; }
+.campo-generado label { font-weight: normal; }
+.campo-generado input { width: 100%; }
+.mensaje { min-height: 1.4em; font-weight: bold; }
+
+@media (max-width: 520px) {
+    body { padding: 16px 10px; }
+    .panel { padding: 16px; }
+    .fila-formulario { align-items: stretch; flex-direction: column; }
+    #cantidad { width: 100%; }
+}

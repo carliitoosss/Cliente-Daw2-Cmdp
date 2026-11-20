@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.logos img{
+    width: 200px;
+    height: 200px;
+    display: flex;
+}
+
+.lupas {
+    display: flex;
+    flex-direction: column;
+    margin-left: 3%;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.containerColores {
+    display: flex;
+    justify-content: center;
+}
+
+.seccionimagenes{
+    border: 5px solid black;
+    border-radius: 15px;
+    width: 50rem;
+    height: 35rem;
+    margin: 0;
+    align-content: center;
+}
+
+#negro{
+    background-color: black;
+    width: 10%;
+    height: 100px;
+}
+#rojo{
+    background-color: red;
+    width: 10%;
+    height: 100px;
+}
+#verde{
+    background-color: green;
+    width: 10%;
+    height: 100px;
+}
+#azul{
+    background-color: blue;
+    width: 10%;
+    height: 100px;
+}
+#amarillo{
+    background-color: yellow;
+    width: 10%;
+    height: 100px;
+}
+#rosa{
+    background-color: pink;
+    width: 10%;
+    height: 100px;
+}
+
+.negro{
+    border-color: black;
+}
+
+.rojo{
+    border-color: red;
+}
+
+.azul{
+    border-color: blue;
+}
+
+.amarillo{
+    border-color: yellow;
+}
+
+.verde{
+    border-color: green;
+}
+
+.rosa{
+    border-color: pink;
+}
+
+
+
